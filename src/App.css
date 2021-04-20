@@ -1,38 +1,171 @@
-.App {
-  text-align: center;
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body,
+html,
+#root,
+.post-container {
+  width: 100%;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.post-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.post-wrapper {
+  width: 500px;
+  height: 350px;
+  border: 1px solid black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 70px;
+}
+.post-wrapper:hover {
+  background-color: rgb(228, 227, 227);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.post-top-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-basis: auto;
+}
+
+.name-email-text-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-email-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.three-dot {
+  position: absolute;
+  right: 40px;
+}
+
+.profile-pic {
+  margin-right: 20px;
+  margin-top: 10px;
+  max-width: 60px;
+  max-height: 40px;
+  min-width: 60px;
+  min-height: 40px;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 25px;
+}
+.email {
+  color: rgb(143, 140, 140);
+}
+.name {
+  font-weight: bold;
+  margin-right: 5px;
+}
+.text {
+  margin: 10px 0px;
+}
+.image-container > img {
+  max-height: 200px;
+  border-radius: 30px;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bottom-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.comments:hover {
+  cursor: pointer;
+}
+.retweets:hover {
+  cursor: pointer;
+}
+.download:hover {
+  cursor: pointer;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+}
+.icon:hover {
+  cursor: pointer;
+}
+.comment-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  z-index: 99999;
+  border: 2px solid black;
+  padding: 40px;
+  background-color: white;
+  border-radius: 40px;
+  overflow: auto;
+  max-height: 50%;
+}
+.comment-popup-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(76, 102, 100, 0.4);
+  z-index: 2;
+}
+.comment-wrapper {
+  border-top: 1px solid rgb(107, 100, 100);
+  padding: 5px 0px;
+  margin: 5px 0px;
+}
+.comment-top-wrapper {
+  padding: 6px 0px;
+}
+li {
+  list-style: none;
+  padding: 5px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.list-container {
+  border: 1px solid black;
+  position: absolute;
+  right: 5px;
+  bottom: -200px;
+  border-radius: 10px;
+}
+li > button {
+  width: 70%;
+  border-radius: 5px;
+  background-color: red;
+  border: none;
+  padding: 5px 2px;
+}
+li > button :focus {
+  outline: none;
+}
+.see-tweet:hover {
+  cursor: pointer;
 }
